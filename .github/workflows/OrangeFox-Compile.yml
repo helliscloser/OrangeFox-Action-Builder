@@ -95,6 +95,7 @@ jobs:
         set +e
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
+        if [ -f device/xiaomi/davinci/vendorsetup.sh ]; then source device/xiaomi/davinci/vendorsetup.sh; else echo "vendorsetup.sh not found!"; fi
         set -e
         lunch twrp_${{ github.event.inputs.DEVICE_NAME }}-eng && make clean && mka adbd ${{ github.event.inputs.BUILD_TARGET }}image
 
