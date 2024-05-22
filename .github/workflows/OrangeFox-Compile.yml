@@ -95,15 +95,11 @@ jobs:
         set +e
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
-        export OF_STATUS_INDENT_LEFT="48"
-    export OF_STATUS_INDENT_RIGHT="48"
-    export OF_SCREEN_H=2340
-    export TARGET_DEVICE_ALT="davinciin"
 export OF_STATUS_INDENT_LEFT="48"
     export OF_STATUS_INDENT_RIGHT="48"
     export OF_SCREEN_H=2340
-    export TARGET_DEVICE_ALT="davinciin"
-    export OF_MAINTAINER="Rumais"
+    export TARGET_DEVICE_ALT=davinciin
+    export OF_MAINTAINER=Rumais
     export OF_USE_LEGACY_BATTERY_SERVICES=1
         if [ -f device/xiaomi/davinci/vendorsetup.sh ]; then source device/xiaomi/davinci/vendorsetup.sh; else echo "vendorsetup.sh not found!"; fi
         set -e
